@@ -1,0 +1,28 @@
+module Bindings.GObject (
+   module Bindings.GObject.BaseObjectType,
+   module Bindings.GObject.BoxedTypes,
+   module Bindings.GObject.Closures,
+   module Bindings.GObject.EnumerationAndFlagTypes,
+   module Bindings.GObject.GenericValues,
+   module Bindings.GObject.GParamSpec,
+   module Bindings.GObject.GTypeModule,
+   module Bindings.GObject.GTypePlugin,
+   module Bindings.GObject.ParametersAndValues,
+   module Bindings.GObject.Signals,
+   module Bindings.GObject.TypeInformation,
+   module Bindings.GObject.ValueArrays,
+   module Bindings.GObject.Varargs
+ ) where
+import Bindings.GObject.BaseObjectType
+import Bindings.GObject.BoxedTypes
+import Bindings.GObject.Closures
+import Bindings.GObject.EnumerationAndFlagTypes
+import Bindings.GObject.GenericValues
+import Bindings.GObject.GParamSpec
+import Bindings.GObject.GTypeModule
+import Bindings.GObject.GTypePlugin
+import Bindings.GObject.ParametersAndValues
+import Bindings.GObject.Signals
+import Bindings.GObject.TypeInformation
+import Bindings.GObject.ValueArrays
+import Bindings.GObject.Varargs
