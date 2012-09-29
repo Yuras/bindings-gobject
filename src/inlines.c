@@ -1,5 +1,5 @@
 #include <glib-object.h>
-#include <bindings.cmacros.h>
+#include <bindings.cmacros.gobject.h>
 
 BC_GOBJECT(G,OBJECT,GObject)
 BC_INLINE1(G_TYPE_IS_OBJECT,GType,gboolean)

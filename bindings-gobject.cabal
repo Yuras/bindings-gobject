@@ -40,3 +40,5 @@ library
     Bindings.GObject.Varargs
   c-sources: src/inlines.c
   pkgconfig-depends: gobject-2.0 >= 2.24.1
+  install-includes: bindings.dsl.gobject.h, bindings.cmacros.gobject.h
+  include-dirs: .

@@ -1,4 +1,4 @@
-#include <bindings.dsl.h>
+#include <bindings.dsl.gobject.h>
 #include <glib-object.h>
 
 -- | <http://library.gnome.org/devel/gobject/stable/gobject-The-Base-Object-Type.html>
@@ -9,6 +9,36 @@ import Bindings.GLib
 import Bindings.GObject.TypeInformation
 import Bindings.GObject.GParamSpec
 import Bindings.GObject.Closures
+
+#starttype GObject
+#field g_type_instance , <GTypeInstance>
+#field ref_count , <guint>
+#field qdata , Ptr ()
+#stoptype
+
+#callback GObjectClass_constructor, <GType> -> <guint> -> Ptr <GObjectConstructParam> -> IO (Ptr <GObject>)
+#callback GObjectClass_set_property, Ptr <GObject> -> <guint> -> Ptr <GValue> -> Ptr <GParamSpec> -> IO ()
+#callback GObjectClass_get_property, Ptr <GObject> -> <guint> -> Ptr <GValue> -> Ptr <GParamSpec> -> IO ()
+#callback GObjectClass_dispose, Ptr <GObject> -> IO ()
+#callback GObjectClass_finalize, Ptr <GObject> -> IO ()
+#callback GObjectClass_dispatch_properties_changed, Ptr <GObject> -> <guint> -> Ptr (Ptr <GParamSpec>) -> IO ()
+#callback GObjectClass_notify, Ptr <GObject> -> Ptr <GParamSpec> -> IO ()
+#callback GObjectClass_constructed, Ptr <GObject> -> IO ()
+
+#starttype GObjectClass
+#field g_type_class , <GTypeClass>
+#field construct_properties, Ptr <GSList>
+#field constructor, <GObjectClass_constructor>
+#field set_property, <GObjectClass_set_property>
+#field get_property, <GObjectClass_get_property>
+#field dispose, <GObjectClass_dispose>
+#field finalize, <GObjectClass_finalize>
+#field dispatch_properties_changed, <GObjectClass_dispatch_properties_changed>
+#field notify, <GObjectClass_notify>
+#field constructed, <GObjectClass_constructed>
+#field flags, <gsize>
+#array_field pdummy, <gpointer>
+#stoptype
 
 #gobject G , OBJECT , GObject
 
