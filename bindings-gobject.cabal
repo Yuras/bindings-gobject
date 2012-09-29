@@ -1,4 +1,4 @@
-cabal-version: >= 1.2.3
+cabal-version: >= 1.6
 name: bindings-gobject
 synopsis:
   Low level bindings supporting GObject and derived libraries.
@@ -7,14 +7,17 @@ description:
   bindings-DSL macros and style. Like GObject, it's
   not useful by itself, but as a foundation for other
   libraries making use of its type system.
-version: 0.3
+version: 0.4
 license: BSD3
 license-file: LICENSE
-maintainer: Maurício C. Antunes <mauricio.antunes@gmail.com>
+maintainer: Yuras Shumovich <shumovichy@gmail.com>
 author: Maurício C. Antunes
 build-type: Simple
 category: FFI
-bug-reports: http://bitbucket.org/mauricio/bindings-dsl/issues
+bug-reports: https://github.com/Yuras/bindings-gobject/issues
+source-repository head
+  type: git
+  location: https://github.com/Yuras/bindings-gobject
 library
   hs-source-dirs: src
   extensions:
